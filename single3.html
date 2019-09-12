@@ -268,6 +268,13 @@
         ) => Promise
                                     
                                           </code></pre>
+<p>The .then() method must comply with these rules:</p>
+<p>Both onFulfilled() and onRejected() are optional.</p>
+<p>If the arguments supplied are not functions, they must be ignored.</p>
+<p>onFulfilled() will be called after the promise is fulfilled, with the promise’s value as the first argument.</p>
+<p>onRejected() will be called after the promise is rejected, with the reason for rejection as the first argument. The reason may be any valid JavaScript value, but because rejections are essentially synonymous with exceptions, I recommend using Error objects.</p>
+<p>Neither onFulfilled() nor onRejected() may be called more than once.</p>
+<p>.then() may be called many times on the same promise. In other words, a promise can be used to aggregate callbacks.</p>
                 <h3>Summary</h3>
 
                 <p>We just learn a super powerfull tool for dealing with asynchrnous code. <code>Promises</code> give us the ability to write asynchronous code in a synchronous fashion, with flat indentation and a single exception channel.</p>
