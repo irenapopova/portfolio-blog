@@ -67,5 +67,5 @@ function init() {
 //google.maps.event.addDomListener(window, 'load', init);
 
 google.maps.event.addDomListener(window, 'load', function () {
-    initialize(latitude, longitude);
+    initialize(52.520008, 13.404954);
  });
